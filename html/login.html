@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>starcheck - log in</title>
+        <link rel="stylesheet" href="../css/login.css">
+        <link rel="icon" type="image/x-icon" href="../images/star.png">
+    </head>
+    <body>
+        <div class="container">
+            <img src="../images/starcheck.png" alt="starcheck">
+            <div class="imgDiv"></div>
+            <form action="../php/login.php" method="post" id="loginForm" class="input">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="username">username:</label>
+                        </td>
+                        <td>
+                            <input id="username" type="text" name="username" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="password">password:</label>
+                        </td>
+                        <td>
+                            <input id="password" type="password" name="password" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <p class="message">
+                                don't have an account?
+                                <a href="signup.html" id="showSignUpLink">sign up! </a>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <button type="submit" id="loginBtn">log in</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div id="errorMsg"></div>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <script src="../js/login.js"></script>
+    </body>
+</html>

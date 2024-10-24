@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>starcheck</title>
+        <link rel="stylesheet" href="../css/tasks.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="icon" type="image/x-icon" href="../images/star.png">
+    </head>
+    <body>
+        <header class="header">
+            <img src="../images/starcheck.png" alt="starcheck" class="logo">
+            <button id="logoutBtn" class="logoutBtn"><i class="fas fa-sign-out-alt"></i></button>
+        </header>
+        <div class="container">
+            <h1 id="userTitle">my to-do list <img id="star" src="../images/star.png"></h1>
+            <div class="filter">
+                <div class="leftBtns">
+                    <button id="allTasksBtn">all tasks</button>
+                    <button id="completedBtn">completed</button>
+                    <button id="inProgressBtn">in progress</button>
+                </div>
+                <button id="addTaskBtn" class="addTaskBtn"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="taskInput" style="display: none;">
+                <input type="text" id="taskInput" placeholder="add a new task..." />
+                <button id="submitTaskBtn">submit</button>
+            </div>
+            <div id="taskList" class="taskList">
+            </div>
+        </div>
+        <script src="../js/tasks.js"></script>
+    </body>
+</html>
