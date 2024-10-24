@@ -1,0 +1,171 @@
+@font-face{
+    font-family: 'NextSunday';
+    src: url('../font/Next\ Sunday.ttf');
+}
+
+*{
+    font-family: 'NextSunday', Arial, sans-serif;
+}
+
+:root{
+    --bg: #f2eaf1;
+    --one: #d4a5df;
+    --two: #f1b78e;
+    --three: #fbddd0;
+    --four: #fffafdd2;
+    --text: #947ccb;
+}
+
+body{
+    background-color: var(--bg);
+    background-image: 
+        linear-gradient(90deg, rgba(247,241,242,255) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(247,241,242,255) 1px, transparent 1px);
+    background-size: 30px 30px;
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container{
+    text-align: center;
+    background-color: var(--four);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    border: 4px dashed var(--three);
+}
+
+img{
+    max-width: 250px;
+}
+
+.imgDiv{
+    border-bottom: 4px solid var(--three);
+    width: 100%; 
+}
+
+form{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form table{
+    margin: 0 auto;
+    width: 100%;
+    table-layout: fixed;
+    box-sizing: border-box;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px;
+    border: 1px solid var(--two);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button{
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+#loginBtn, #signupBtn{
+    width: 100%;
+    height: 40px;
+    padding: 0.5em;
+    font-family: 'NextSunday';
+    font-size: 1rem;
+    border-radius: 2em;
+    border:none;
+    background: var(--one);
+    color: var(--four);
+    box-shadow: var(--two) 0 5px 0 0;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    transition: all .3s ease;
+}
+
+#loginBtn:hover, #signupBtn:hover{
+    background: var(--two);
+    color: var(--text);
+    box-shadow: var(--text) 0 5px 0 0;
+}
+
+#loginBtn:focus, #signupBtn:focus{
+    transform: translate(0, 5px);
+    box-shadow: none;
+}
+
+.message{
+    margin-top: 10px;
+}
+
+a{
+    color: var(--two);
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+#errorMsg{
+    color: #e52b50;
+}
+
+@media (max-width: 768px){
+    .container{
+        max-width: 400px;
+        padding: 15px;
+    }
+
+    img{
+        max-width: 150px;
+    }
+
+    input{
+        padding: 8px;
+    }
+
+    #loginBtn, #signupBtn{
+        height: 35px;
+        font-size: 0.9rem;
+    }
+
+    .message{
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px){
+    .container{
+        max-width: 300px;
+        padding: 10px;
+    }
+
+    img{
+        max-width: 120px;
+    }
+
+    input{
+        padding: 6px;
+    }
+
+    #loginBtn, #signupBtn{
+        height: 30px;
+        font-size: 0.8rem;
+    }
+
+    .message{
+        font-size: 0.8rem;
+    }
+}
