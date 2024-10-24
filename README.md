@@ -34,3 +34,7 @@ https://github.com/user-attachments/assets/8627ef11-28f9-4705-a9f0-6be0f83579bd
 - add categories for tasks
 - add timestamps to task cards
 - add more animations
+
+✦•······················ Others ······················•✦
+- font: https://www.dafont.com/next-sunday.font
+- icon+logo: by me :>
