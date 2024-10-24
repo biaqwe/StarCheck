@@ -1,4 +1,4 @@
-# starcheck
+# StarCheck ★
 
 ✦ . 　⁺  　Technologies Used  　⁺ 　 . ✦
 - HTML
@@ -24,7 +24,8 @@
   - allows the user to filter tasks by completion
   - features a logout button that takes the user back to the login page
 
-✦ . 　⁺ 　    Demo Video        ⁺ 　 . ✦
+✦ . 　⁺ 　      Demo Vid        ⁺ 　 . ✦
+https://github.com/user-attachments/assets/59f6dab2-8bad-4107-a642-aef74c5c09b4eo
 
 ✦ . 　⁺ 　Future Improvements   ⁺ 　 . ✦
 - add restrictions to passwords to ensure account security
