@@ -1,13 +1,13 @@
 # StarCheck ★
 
-✦ . 　⁺  　Technologies Used  　⁺ 　 . ✦
+✦ . 　⁺ Technologies Used ⁺ 　 . ✦
 - HTML
 - CSS
 - JS
 - PHP
 - MYSQL
 
-✦ . 　⁺    　  Features         ⁺ 　 . ✦
+✦ . 　⁺ Features ⁺ 　 . ✦
 - Login:
   - displays an error message if the credentials entered are invalid
 - Signup:
@@ -24,10 +24,11 @@
   - allows the user to filter tasks by completion
   - features a logout button that takes the user back to the login page
 
-✦ . 　⁺ 　      Demo Vid        ⁺ 　 . ✦
-https://github.com/user-attachments/assets/59f6dab2-8bad-4107-a642-aef74c5c09b4eo
+✦ . 　⁺ Demo Vid ⁺ 　 . ✦
 
-✦ . 　⁺ 　Future Improvements   ⁺ 　 . ✦
+https://github.com/user-attachments/assets/8627ef11-28f9-4705-a9f0-6be0f83579bd
+
+✦ . 　⁺　Future Improvements ⁺ 　 . ✦
 - add restrictions to passwords to ensure account security
 - updates to the layout and design
 - add categories for tasks
