@@ -8,12 +8,21 @@
 }
 
 :root{
+    /* light mode colours */
     --bg: #f2eaf1;
     --one: #d4a5df;
     --two: #f1b78e;
     --three: #fbddd0;
     --four: #fffafdd2;
     --text: #947ccb;
+
+    /* dark mode colours */
+    --dark-bg: #2c2e33;
+    --dark-one: #3d2b60;
+    --dark-two: #e1b7a5;
+    --dark-three: #f8e1d4;
+    --dark-four: #4b3c55;
+    --dark-text: #f5e0e2;
 }
 
 body{
@@ -30,6 +39,14 @@ body{
     margin: 0;
 }
 
+body.dark{
+    background-color: var(--dark-bg);
+    background-image: 
+        linear-gradient(90deg, #5b3f7ee4 1px, transparent 1px),
+        linear-gradient(180deg, #5b3f7ee4 1px, transparent 1px);
+    color: var(--dark-text);
+}
+
 .header{
     position: sticky;
     top: 0;
@@ -44,14 +61,42 @@ body{
     padding: 10px 20px;
 }
 
+body.dark .header{
+    background-color: #c5a5e1ad;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 .logo{
-    max-width: 200px;
+    max-width: 250px;
     flex-shrink: 0;
 }
 
-.logoutBtn{
+.btnContainer{
+    display: flex;
+    gap: 5px; 
     margin-right: 10px;
-    flex-shrink: 0;
+}
+
+.logoutBtn, .themeBtn{
+    background: var(--one);
+    color: var(--four);
+    border: none;
+    border-radius: 2em;
+    width: 50px;
+    height: 50px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .3s ease;
+    box-shadow: var(--two) 0 5px 0 0;
+}
+
+body.dark .logoutBtn, body.dark .themeBtn{
+    background: var(--dark-two);
+    color: var(--dark-four);
+    box-shadow: #705aa3 0 5px 0 0;
 }
 
 .container{
@@ -64,6 +109,11 @@ body{
     max-width: 700px;
     border: 4px dashed var(--three);
     margin-top: 20px;
+}
+
+body.dark .container{
+    background-color: var(--dark-four);
+    border-color: #705aa3d4;
 }
 
 h1{
@@ -82,6 +132,13 @@ input{
     border: 1px solid #ccc;
     border-radius: 10px;
     margin-right: 10px;
+    color: var(--text);
+}
+
+body.dark input{
+    border-color: var(--dark-two);
+    background-color: var(--dark-three);
+    color: var(--dark-four);
 }
 
 button{
@@ -120,10 +177,22 @@ button:hover{
     transition: all 0.3s ease;
 }
 
+body.dark .filter button{
+    background: var(--dark-two);
+    color: var(--dark-four);
+    box-shadow: #705aa3 0 5px 0 0;
+}
+
 .filter button:hover{
     background: var(--two);
     color: var(--text);
     box-shadow: var(--text) 0 5px 0 0;
+}
+
+body.dark .filter button:hover{
+    background: #705aa3;
+    color: var(--dark-text);
+    box-shadow: var(--dark-two) 0 5px 0 0;
 }
 
 .filter button:focus{
@@ -131,7 +200,12 @@ button:hover{
     box-shadow: none;
 }
 
-.addTaskBtn, .completeBtn, .editBtn, .deleteBtn, .logoutBtn{
+body.dark .filter button:focus{
+    transform: translate(0, 5px);
+    box-shadow: none;
+}
+
+.addTaskBtn, .completeBtn, .editBtn, .deleteBtn, .logoutBtn, .themeBtn{
     background: var(--one);
     color: var(--four);
     border: none;
@@ -145,13 +219,30 @@ button:hover{
     transition: all .3s ease;
 }
 
-.addTaskBtn:hover, .completeBtn:hover, .editBtn:hover, .deleteBtn:hover, .logoutBtn:hover{
+body.dark .addTaskBtn, body.dark .completeBtn, body.dark .editBtn, body.dark .deleteBtn, body.dark .logoutBtn, body.dark .themeBtn{
+    background: var(--dark-two);
+    color: var(--dark-four);
+    box-shadow: #705aa3 0 5px 0 0;
+}
+
+.addTaskBtn:hover, .completeBtn:hover, .editBtn:hover, .deleteBtn:hover, .logoutBtn:hover, .themeBtn:hover{
     background: var(--two);
     color: var(--text);
     box-shadow: var(--text) 0 5px 0 0;
 }
 
-.addTaskBtn:focus, .completeBtn:focus, .editBtn:focus, .deleteBtn:focus, .logoutBtn:focus{
+body.dark .addTaskBtn:hover, body.dark .completeBtn:hover, body.dark .editBtn:hover, body.dark .deleteBtn:hover, body.dark .logoutBtn:hover, body.dark .themeBtn:hover{
+    background: #705aa3;
+    color: var(--dark-text);
+    box-shadow: var(--dark-two) 0 5px 0 0;
+}
+
+.addTaskBtn:focus, .completeBtn:focus, .editBtn:focus, .deleteBtn:focus, .logoutBtn:focus, .themeBtn:focus{
+    transform: translate(0, 5px);
+    box-shadow: none;
+}
+
+body.dark .addTaskBtn:focus, body.dark .completeBtn:focus, body.dark .editBtn:focus, body.dark .deleteBtn:focus, body.dark .logoutBtn:focus, body.dark .themeBtn:focus{
     transform: translate(0, 5px);
     box-shadow: none;
 }
@@ -179,6 +270,13 @@ button:hover{
     position: relative;
 }
 
+body.dark .card{
+    background: var(--dark-bg);
+    color: var(--dark-text);
+    border-color: var(--dark-one);
+    box-shadow: #705aa3 0 5px 0 0;
+}
+
 .taskContent{
     flex-grow: 1;
 }
@@ -199,13 +297,30 @@ button:hover{
     cursor: pointer;
 }
 
+body.dark #submitTaskBtn{
+    background: var(--dark-two);
+    color: var(--dark-four);
+    box-shadow: #705aa3 0 5px 0 0;
+}
+
 #submitTaskBtn:hover{
     background: var(--two);
     color: var(--text);
 }
 
+body.dark #submitTaskBtn:hover{
+    background: #705aa3;
+    color: var(--dark-text);
+    box-shadow: var(--dark-two) 0 5px 0 0;
+}
+
 .completed{
     color: #49A078; 
+    text-decoration: line-through; 
+}
+
+body.dark .completed{
+    color: #80C6A1; 
     text-decoration: line-through; 
 }
 
@@ -216,9 +331,21 @@ button:hover{
     box-shadow: #72d0a4 0 5px 0 0;
 }
 
+body.dark .completedCard{
+    background: #2A3D2A;
+    color: #80C6A1;
+    box-shadow: #5AB0A2 0 5px 0 0;
+}
+
 .completedCard .completeBtn, .completedCard .editBtn, .completedCard .deleteBtn{
     background-color: #53be8c;
     color: #F0EAD2;
+    box-shadow: none;
+}
+
+body.dark .completedCard .completeBtn, body.dark .completedCard .editBtn, body.dark .completedCard .deleteBtn{
+    background-color: #5AB0A2;
+    color: #fee6dc;
     box-shadow: none;
 }
 
@@ -229,6 +356,10 @@ button:hover{
 }
 
 @media (max-width: 768px){
+    .logo{
+        max-width: 200px;
+    }
+
     .container{
         width: 80%;
         max-width: 600px;
@@ -269,7 +400,7 @@ button:hover{
         width: 90%;
     }
 
-    .logoutBtn, .addTaskBtn, .completeBtn, .editBtn, .deleteBtn{
+    .logoutBtn, .addTaskBtn, .completeBtn, .editBtn, .deleteBtn, .themeBtn{
         width: 35px;
         height: 35px; 
         font-size: 0.7rem; 
@@ -314,7 +445,7 @@ button:hover{
         font-size: 1em;
     }
 
-    .logoutBtn, .addTaskBtn, .completeBtn, .editBtn, .deleteBtn{
+    .logoutBtn, .addTaskBtn, .completeBtn, .editBtn, .deleteBtn, .themeBtn{
         width: 30px;
         height: 30px;
         font-size: 0.6rem; 
