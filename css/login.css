@@ -8,19 +8,28 @@
 }
 
 :root{
+    /* light mode colours */
     --bg: #f2eaf1;
     --one: #d4a5df;
     --two: #f1b78e;
     --three: #fbddd0;
     --four: #fffafdd2;
     --text: #947ccb;
+
+    /* dark mode colours */
+    --dark-bg: #2c2e33;
+    --dark-one: #3d2b60;
+    --dark-two: #e1b7a5;
+    --dark-three: #f8e1d4;
+    --dark-four: #4b3c55;
+    --dark-text: #f5e0e2;
 }
 
 body{
     background-color: var(--bg);
     background-image: 
-        linear-gradient(90deg, rgba(247,241,242,255) 1px, transparent 1px),
-        linear-gradient(180deg, rgba(247,241,242,255) 1px, transparent 1px);
+        linear-gradient(90deg, #fffafdd2 1px, transparent 1px),
+        linear-gradient(180deg, #fffafdd2 1px, transparent 1px);
     background-size: 30px 30px;
     color: var(--text);
     display: flex;
@@ -29,6 +38,14 @@ body{
     height: 100vh;
     margin: 0;
     overflow: hidden;
+}
+
+body.dark{
+    background-color: var(--dark-bg);
+    background-image: 
+        linear-gradient(90deg, #5b3f7ee4 1px, transparent 1px),
+        linear-gradient(180deg, #5b3f7ee4 1px, transparent 1px);
+    color: var(--dark-text);
 }
 
 .container{
@@ -43,13 +60,26 @@ body{
     border: 4px dashed var(--three);
 }
 
+body.dark .container{
+    background-color: var(--dark-four);
+    border-color: #705aa3d4;
+}
+
 img{
     max-width: 250px;
+}
+
+body.dark #showSignUpLink, body.dark #showLoginLink{
+    color: var(--dark-three);
 }
 
 .imgDiv{
     border-bottom: 4px solid var(--three);
     width: 100%; 
+}
+
+body.dark .imgDiv{
+    border-color: #705aa3d4;
 }
 
 form{
@@ -71,6 +101,13 @@ input{
     border: 1px solid var(--two);
     border-radius: 5px;
     box-sizing: border-box;
+    color: var(--text);
+}
+
+body.dark input{
+    border-color: var(--dark-two);
+    background-color: var(--dark-three);
+    color: var(--dark-four);
 }
 
 button{
@@ -94,16 +131,29 @@ button{
     transition: all .3s ease;
 }
 
+body.dark #loginBtn, body.dark #signupBtn{
+    background: var(--dark-two);
+    color: var(--dark-four);
+    box-shadow: #705aa3 0 5px 0 0;
+}
+
 #loginBtn:hover, #signupBtn:hover{
     background: var(--two);
     color: var(--text);
     box-shadow: var(--text) 0 5px 0 0;
 }
 
+body.dark #loginBtn:hover, body.dark #signupBtn:hover{
+    background: #705aa3;
+    color: var(--dark-text);
+    box-shadow: var(--dark-two) 0 5px 0 0;
+}
+
 #loginBtn:focus, #signupBtn:focus{
     transform: translate(0, 5px);
     box-shadow: none;
 }
+
 
 .message{
     margin-top: 10px;
@@ -122,6 +172,56 @@ a:hover{
     color: #e52b50;
 }
 
+#theme{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border: none;
+    background-color: var(--one);
+    color: var(--four);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background: var(--one);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .3s ease;
+    box-shadow: var(--two) 0 5px 0 0;
+}
+
+body.dark #theme{
+    background: var(--dark-two);
+    color: var(--dark-four);
+    box-shadow: #705aa3 0 5px 0 0;
+}
+
+#theme:hover{
+    background-color: var(--two);
+    color: var(--text);
+    box-shadow: var(--text) 0 5px 0 0;
+}
+
+body.dark #theme:hover{
+    background: #705aa3;
+    color: var(--dark-text);
+    box-shadow: var(--dark-two) 0 5px 0 0;
+}
+
+#theme:focus{
+    transform: translate(0, 5px);
+    box-shadow: none;
+}
+
+body.dark #theme:focus{
+    transform: translate(0, 5px);
+    box-shadow: none;
+}
+
 @media (max-width: 768px){
     .container{
         max-width: 400px;
@@ -129,7 +229,7 @@ a:hover{
     }
 
     img{
-        max-width: 150px;
+        max-width: 200px;
     }
 
     input{
@@ -144,6 +244,13 @@ a:hover{
     .message{
         font-size: 0.9rem;
     }
+
+    #theme{
+        width: 35px;
+        height: 35px;
+        font-size: 0.7rem; 
+        padding: 0; 
+    }
 }
 
 @media (max-width: 480px){
@@ -153,7 +260,7 @@ a:hover{
     }
 
     img{
-        max-width: 120px;
+        max-width: 180px;
     }
 
     input{
@@ -167,5 +274,12 @@ a:hover{
 
     .message{
         font-size: 0.8rem;
+    }
+
+    #theme{
+        width: 30px;
+        height: 30px;
+        font-size: 0.6rem; 
+        padding: 0; 
     }
 }
