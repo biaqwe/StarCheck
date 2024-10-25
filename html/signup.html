@@ -3,71 +3,36 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>starcheck - sign up</title>
-        <link rel="stylesheet" href="../css/login.css">
-        <link rel="icon" type="image/x-icon" href="../images/star.png">
+        <title>starcheck</title>
+        <link rel="stylesheet" href="../css/tasks.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="icon" type="image/x-icon" href="../images/star.png">
     </head>
     <body>
-    <div class="container">
-        <button id="theme"><i class="fas fa-moon"></i></button>
-        <img src="../images/starcheck.png" alt="starcheck">
-        <div class="imgDiv"></div>
-        <form action="../php/signup.php" method="post" id="signupForm" style="display: inline-block;">
-            <table style="margin: 0 auto;">
-                <tr>
-                    <td>
-                        <label for="username">username:</label>
-                    </td>
-                    <td>
-                        <input id="username" type="text" name="username" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="email">email:</label>
-                    </td>
-                    <td>
-                        <input type="email" id="email" name="email" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="password">password:</label>
-                    </td>
-                    <td>
-                        <input id="password" type="password" name="password" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="confirmPassword">confirm password:</label>
-                    </td>
-                    <td>
-                        <input id="confirmPassword" type="password" name="confirmPassword" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <p class="message">
-                            already have an account? 
-                            <a href="login.html" id="showLogInLink">log in! <i class="fa-solid fa-right-to-bracket"></i></a>
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <button type="submit" id="signupBtn">sign up</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <div id="errorMsg"></div>
-                    </td>
-                </tr>
-            </table>
-        </form>
-    </div>
-    <script src="../js/signup.js"></script>
+        <header class="header">
+            <img src="../images/starcheck.png" alt="starcheck" class="logo">
+            <div class="btnContainer">
+                <button id="logoutBtn" class="logoutBtn"><i class="fas fa-sign-out-alt"></i></button>
+                <button id="theme" class="themeBtn"><i class="fas fa-moon"></i></button>    
+            </div>
+        </header>
+        <div class="container">
+            <h1 id="userTitle">my to-do list <img id="star" src="../images/star.png"></h1>
+            <div class="filter">
+                <div class="leftBtns">
+                    <button id="allTasksBtn">all tasks</button>
+                    <button id="completedBtn">completed</button>
+                    <button id="inProgressBtn">in progress</button>
+                </div>
+                <button id="addTaskBtn" class="addTaskBtn"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="taskInput" style="display: none;">
+                <input type="text" id="taskInput" placeholder="add a new task..." />
+                <button id="submitTaskBtn">submit</button>
+            </div>
+            <div id="taskList" class="taskList">
+            </div>
+        </div>
+        <script src="../js/tasks.js"></script>
     </body>
 </html>
