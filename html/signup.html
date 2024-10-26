@@ -11,61 +11,22 @@
     <body>
     <div class="container">
         <button id="theme"><i class="fas fa-moon"></i></button>
-        <img src="../images/starcheck.png" alt="starcheck">
-        <div class="imgDiv"></div>
+        <div class="imageContainer">
+            <img src="../images/starcheck.png" alt="starcheck">
+        </div>
         <form action="../php/signup.php" method="post" id="signupForm" style="display: inline-block;">
-            <table style="margin: 0 auto;">
-                <tr>
-                    <td>
-                        <label for="username">username:</label>
-                    </td>
-                    <td>
-                        <input id="username" type="text" name="username" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="email">email:</label>
-                    </td>
-                    <td>
-                        <input type="email" id="email" name="email" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="password">password:</label>
-                    </td>
-                    <td>
-                        <input id="password" type="password" name="password" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="confirmPassword">confirm password:</label>
-                    </td>
-                    <td>
-                        <input id="confirmPassword" type="password" name="confirmPassword" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <p class="message">
-                            already have an account? 
-                            <a href="login.html" id="showLogInLink">log in! <i class="fa-solid fa-right-to-bracket"></i></a>
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <button type="submit" id="signupBtn">sign up</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <div id="errorMsg"></div>
-                    </td>
-                </tr>
-            </table>
+            <div class="formContainer">
+                <input id="username" type="text" name="username" placeholder="enter a username" required>
+                <input type="email" id="email" name="email" placeholder="enter an email" required>
+                <input id="password" type="password" name="password" placeholder="enter a password" required>
+                <input id="confirmPassword" type="password" name="confirmPassword" placeholder="confirm password" required>
+                <button type="submit" id="signupBtn">sign up</button>
+                <p class="message">
+                    already have an account? 
+                    <a href="login.html" id="showLogInLink">log in! <i class="fa-solid fa-right-to-bracket"></i></a>
+                </p>
+                <div id="errorMsg"></div>
+            </div>
         </form>
     </div>
     <script src="../js/signup.js"></script>
