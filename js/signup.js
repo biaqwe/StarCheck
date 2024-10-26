@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
+    document.body.classList.remove('fadeOut');
     //save theme preference in local storage to keep after page refresh and across pages
     const body=document.body;
     const theme=document.getElementById('theme');
@@ -54,4 +55,12 @@ document.addEventListener("DOMContentLoaded", function(){
             localStorage.setItem('theme', 'light');
         }
     });
+});
+
+document.getElementById('showLogInLink').addEventListener('click', function(e){
+    e.preventDefault();
+    document.body.classList.add('fadeOut');
+    setTimeout(()=>{
+        window.location.href="login.html";
+    }, 500);
 });
