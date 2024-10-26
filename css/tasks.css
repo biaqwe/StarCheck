@@ -107,7 +107,6 @@ body.dark .logoutBtn, body.dark .themeBtn{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 90%;
     max-width: 700px;
-    border: 4px dashed var(--three);
     margin-top: 20px;
 }
 
@@ -129,16 +128,31 @@ h1{
 input{
     width: 70%;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    border: 3.5px solid var(--one);
+    border-radius: 30px;
     margin-right: 10px;
     color: var(--text);
+    cursor: pointer;
 }
 
 body.dark input{
     border-color: var(--dark-two);
     background-color: var(--dark-three);
     color: var(--dark-four);
+}
+
+input:hover::placeholder{
+    opacity: 0.3;
+}
+
+input::placeholder{
+    color: var(--text);
+    transition: opacity 0.8s ease;
+    opacity: 0.6;
+}
+
+body.dark input::placeholder{
+    color: var(--dark-one);
 }
 
 button{
@@ -332,7 +346,7 @@ body.dark .completed{
 }
 
 body.dark .completedCard{
-    background: #2A3D2A;
+    background: var(--dark-bg);
     color: #80C6A1;
     box-shadow: #5AB0A2 0 5px 0 0;
 }
@@ -397,7 +411,7 @@ body.dark .completedCard .completeBtn, body.dark .completedCard .editBtn, body.d
     }
 
     .taskInput input{
-        width: 90%;
+        width: 45%;
     }
 
     .logoutBtn, .addTaskBtn, .completeBtn, .editBtn, .deleteBtn, .themeBtn{
@@ -438,7 +452,7 @@ body.dark .completedCard .completeBtn, body.dark .completedCard .editBtn, body.d
     }
 
     .taskInput input{
-        width: 100%;
+        width: 50%;
     }
     
     h1{
