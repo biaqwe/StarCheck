@@ -57,7 +57,6 @@ body.dark{
     width: 100%;
     max-width: 500px;
     box-sizing: border-box;
-    border: 4px dashed var(--three);
 }
 
 body.dark .container{
@@ -65,21 +64,15 @@ body.dark .container{
     border-color: #705aa3d4;
 }
 
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
 img{
-    max-width: 250px;
-}
-
-body.dark #showSignUpLink, body.dark #showLoginLink{
-    color: var(--dark-three);
-}
-
-.imgDiv{
-    border-bottom: 4px solid var(--three);
-    width: 100%; 
-}
-
-body.dark .imgDiv{
-    border-color: #705aa3d4;
+    max-width: 350px;
 }
 
 form{
@@ -87,21 +80,42 @@ form{
     box-sizing: border-box;
 }
 
-form table{
-    margin: 0 auto;
-    width: 100%;
-    table-layout: fixed;
-    box-sizing: border-box;
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 input{
-    width: 100%;
+    width: 80%;
     padding: 10px;
     margin: 5px 0 20px;
-    border: 1px solid var(--two);
-    border-radius: 5px;
+    border: 3.5px solid var(--one);
+    border-radius: 30px;
     box-sizing: border-box;
     color: var(--text);
+    text-align: center;
+    cursor: pointer;
+}
+
+body.dark input{
+    border-color: var(--dark-two);
+    background-color: var(--dark-three);
+    color: var(--dark-four);
+}
+
+input:hover::placeholder{
+    opacity: 0.3;
+}
+
+input::placeholder{
+    color: var(--text);
+    transition: opacity 0.8s ease;
+    opacity: 0.6;
+}
+
+body.dark input::placeholder{
+    color: var(--dark-one);
 }
 
 body.dark input{
@@ -116,7 +130,7 @@ button{
 }
 
 #loginBtn, #signupBtn{
-    width: 100%;
+    width: 50%;
     height: 40px;
     padding: 0.5em;
     font-family: 'NextSunday';
@@ -126,7 +140,7 @@ button{
     background: var(--one);
     color: var(--four);
     box-shadow: var(--two) 0 5px 0 0;
-    margin-top: 2em;
+    margin-top: 1em;
     margin-bottom: 2em;
     transition: all .3s ease;
 }
@@ -169,7 +183,7 @@ a:hover{
 }
 
 #errorMsg{
-    color: #e52b50;
+    color: #f48091;
 }
 
 #theme{
@@ -222,6 +236,15 @@ body.dark #theme:focus{
     box-shadow: none;
 }
 
+.fadeOut, .fadeIn {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fadeIn {
+    opacity: 1;
+}
+
 @media (max-width: 768px){
     .container{
         max-width: 400px;
@@ -229,7 +252,7 @@ body.dark #theme:focus{
     }
 
     img{
-        max-width: 200px;
+        max-width: 300px;
     }
 
     input{
@@ -260,7 +283,7 @@ body.dark #theme:focus{
     }
 
     img{
-        max-width: 180px;
+        max-width: 250px;
     }
 
     input{
