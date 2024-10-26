@@ -29,7 +29,7 @@
 
 ✦•······················ Demo Video ······················•✦
 
-https://github.com/user-attachments/assets/8627ef11-28f9-4705-a9f0-6be0f83579bd
+https://github.com/user-attachments/assets/fcf1b30b-9905-4786-96f8-65737e9db27a
 
 ✦•······················ Future Improvements ······················•✦
 - add restrictions to passwords to ensure account security
