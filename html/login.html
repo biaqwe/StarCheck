@@ -8,48 +8,23 @@
         <link rel="icon" type="image/x-icon" href="../images/star.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     </head>
-    <body>
+    <body class="fadeOut">
         <button id="theme"><i class="fas fa-moon"></i></button>
         <div class="container">
-            <img src="../images/starcheck.png" alt="starcheck">
-            <div class="imgDiv"></div>
+            <div class="imageContainer">
+                <img src="../images/starcheck.png" alt="starcheck">
+            </div>
             <form action="../php/login.php" method="post" id="loginForm" class="input">
-                <table>
-                    <tr>
-                        <td>
-                            <label for="username">username:</label>
-                        </td>
-                        <td>
-                            <input id="username" type="text" name="username" required>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="password">password:</label>
-                        </td>
-                        <td>
-                            <input id="password" type="password" name="password" required>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <p class="message">
-                                don't have an account?
-                                <a href="signup.html" id="showSignUpLink">sign up! </a>
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <button type="submit" id="loginBtn">log in</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <div id="errorMsg"></div>
-                        </td>
-                    </tr>
-                </table>
+                <div class="formContainer">
+                    <input id="username" type="text" name="username" placeholder="enter your username" required>
+                    <input id="password" type="password" name="password" placeholder="enter your password" required>
+                    <button type="submit" id="loginBtn">log in</button>
+                    <p class="message">
+                        don't have an account?
+                        <a href="signup.html" id="showSignUpLink">sign up!</a>
+                    </p>
+                    <div id="errorMsg"></div>
+                </div>
             </form>
         </div>
         <script src="../js/login.js"></script>
