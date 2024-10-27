@@ -22,6 +22,9 @@ document.addEventListener("DOMContentLoaded", function(){
     if(error){
         let message='';
         //check after form is submitted
+        if(error==='shortPassword'){
+            message='password must be at least 8 characters long.';
+        }
         if(error==='dontMatch'){
             message='passwords do not match.';
         }
@@ -35,6 +38,13 @@ document.addEventListener("DOMContentLoaded", function(){
     signupForm.addEventListener('submit', function(event){
         const password=document.getElementById('password').value;
         const confirmPassword=document.getElementById('confirmPassword').value;
+
+        if(password.length<8){
+            event.preventDefault();
+            document.getElementById('errorMsg').innerText='password must be at least 8 characters long.';
+            return;
+        }
+
         if(password!==confirmPassword){
             event.preventDefault();
             document.getElementById('errorMsg').innerText='passwords do not match.';
