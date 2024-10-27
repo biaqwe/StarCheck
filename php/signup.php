@@ -17,6 +17,11 @@
     $password=$_POST['password'];
     $confirmPassword=$_POST['confirmPassword'];
 
+    if(strlen($password)<8){
+        header("location: ../html/signup.html?error=shortPassword");
+        exit();
+    }
+
     if($password!==$confirmPassword){
         header("location: ../html/signup.html?error=dontMatch");
         exit();
