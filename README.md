@@ -13,7 +13,8 @@
   - allows the user to switch between light and dark mode
 - Signup:
   - displays an error message if a user with the entered username or email already exists
-  - displays an error message if the passowrd field and the confirm password field don't match
+  - displays an error message if the password field and the confirm password field don't match
+  - displays an error message if the password isn't at least 8 characters long
   - upon successful signup takes the user to the login page
   - allows the user to switch between light and dark mode
 - Tasks:
@@ -32,7 +33,6 @@
 https://github.com/user-attachments/assets/fcf1b30b-9905-4786-96f8-65737e9db27a
 
 ## ✦•······················ Future Improvements ······················•✦
-- add restrictions to passwords to ensure account security
 - updates to the layout and design
 - add categories for tasks
 - add timestamps to task cards
